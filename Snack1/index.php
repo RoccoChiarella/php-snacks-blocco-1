@@ -10,7 +10,7 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title></title>
+        <title>BasketBall</title>
     </head>
     <body>
         <?php
