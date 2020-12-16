@@ -1,9 +1,23 @@
 <?php
     $matches = [
-        'homeTeams' => ['Chicago Bulls', 'Boston Celtics', 'Detroit Pistons'],
-        'guestTeams' => ['Los Angeles Lakers', 'Miami Heat', 'Denver Nuggets'],
-        'homeScores' => [30, 50, 45],
-        'guestScores' => [15, 50, 60]
+        [
+            'homeTeam' => 'Chicago Bulls',
+            'guestTeam' => 'Los Angeles Lakers',
+            'homeScore' => 30,
+            'guestScore' => 15
+        ],
+        [
+            'homeTeam' => 'Boston Celtics',
+            'guestTeam' => 'Miami Heat',
+            'homeScore' => 50,
+            'guestScore' => 45
+        ],
+        [
+            'homeTeam' => 'Detroit Pistons',
+            'guestTeam' => 'Denver Nuggets',
+            'homeScore' => 50,
+            'guestScore' => 60
+        ]
     ];
 ?>
 <!DOCTYPE html>
@@ -11,12 +25,28 @@
     <head>
         <meta charset="utf-8">
         <title>BasketBall</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <?php
-            for ($i=0; $i < count($matches['homeTeams']); $i++) {
-                echo $matches['homeTeams'][$i] . ' - ' . $matches['guestTeams'][$i] . ' | ' . $matches['homeScores'][$i] . ' - ' . $matches['guestScores'][$i] . '<br>';
-            }
-        ?>
-    </body>
+        <div class="container">
+            <div class="header matchesContainer">
+                <span>Squadra in casa</span>
+                <span>Squadra ospite</span>
+                <span>Punteggio squadra in casa</span>
+                <span>Punteggio squadra ospite</span>
+            </div>
+            <?php
+                for ($i=0; $i < count($matches); $i++) {
+                    ?>
+                    <div class="matchesContainer">
+                        <span><?php echo $matches[$i]['homeTeam'] ?></span>
+                        <span><?php echo $matches[$i]['guestTeam'] ?></span>
+                        <span><?php echo $matches[$i]['homeScore'] ?></span>
+                        <span><?php echo $matches[$i]['guestScore'] ?></span>
+                    </div>
+                    <?php
+                }
+            ?>
+        </body>
+        </div>
 </html>

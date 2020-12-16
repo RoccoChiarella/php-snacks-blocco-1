@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    margin: 10px 0;
+    color: red;
+}
+
+.matchesContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.matchesContainer span{
+    width: 25%;
+    text-align: center;
+}
